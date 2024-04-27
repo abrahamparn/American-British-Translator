@@ -33,7 +33,6 @@ module.exports = function (app) {
       return res.json({ error: "No text to translate" });
     }
     const locale = req.body.locale;
-    if (!locale) return res.json({ error: "No translation module choosen" });
 
     if (locale === "american-to-british" || locale === "british-to-american") {
       return res.json({
